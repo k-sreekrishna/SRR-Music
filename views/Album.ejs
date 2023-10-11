@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= Album.title %></title>
+    <link rel="stylesheet" href="../assets/css/musicPlayer.css">
+</head>
+<body>
+    <div class="simple-audio-player" id="simp" data-config='{"shide_top":false,"shide_btm":false,"auto_load":false}'>
+        <div class="simp-playlist">
+          <ul>
+            <% Album.urls.forEach((url) => { %>
+                <li><span class="simp-source" data-src="<%= url %>"><%= url.split('_')[0].split('/')[5] %></span><span class="simp-desc"><%= %></span></li>
+            <% }) %>
+          </ul>
+        </div>
+        <div class="simp-footer">Ramaragini classical music academy<a href="/" target="_blank" title="ramani">Ramani</a></div>
+      </div>
+      <script src="../assets/js/musicPlayer.js"></script>
+</body>
+</html>

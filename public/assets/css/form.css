@@ -1,0 +1,16 @@
+#menu {
+    background-color: #b31131;
+}
+body {
+  background-color: rgba(134, 8, 13, 0.9);
+}
+.form-container {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 400px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-top: 100px;
+}

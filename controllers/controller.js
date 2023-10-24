@@ -151,7 +151,7 @@ const getUpload = (req, res) => {
 }
 
 const getHomePage = (req, res) => {
-    res.status(200).render('NewHome.ejs', { title: "Home" });
+    res.status(200).render('Home.ejs', { title: "Home" });
 }
 
 const getAdminPage = (req, res) => {

@@ -17,6 +17,7 @@ const {
     promote,
     promoteUser
 } = require('../controllers/controller.js');
+
 const routes = express.Router();
 
 const { authMiddleware, authAdmin, authMod } = require('../middlewares/auth/authMiddleware');
@@ -40,13 +41,9 @@ routes.post('/search', authMiddleware, getSearchedAlbums);
 
 routes.get("/album/:id", getAlbum);
 
-
-
-routes.get('/secured', authMiddleware, authMod, (req, res) => { res.send(`<h1>Hellow ${req.user.name} </h1>`) });
-
 routes.get('/admin', authMiddleware, authMod, getAdminPage);
 
-routes.get('/tobeapproved', authMiddleware, authAdmin, tobeapproved);
+routes.get('/approve', authMiddleware, authAdmin, tobeapproved);
 routes.post('/approve/:id', authMiddleware, authAdmin, approveUser);
 
 routes.get('/promote', authMiddleware, authAdmin, promote);

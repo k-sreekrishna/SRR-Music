@@ -1,9 +1,18 @@
+:root {
+  --first-bg: #ff4d00;
+  --second-bg: #ff7400;
+  --second-c: #fff;
+  --third-c: #000;
+}
+
 #menu {
-    background-color: #b31131;
+  background-color: var(--first-bg);
 }
+
 body {
-  background-color: rgba(134, 8, 13, 0.9);
+  background-color: var(--second-bg);
 }
+
 .form-container {
   background-color: white;
   border-radius: 5px;

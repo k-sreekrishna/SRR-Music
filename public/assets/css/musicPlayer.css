@@ -11,13 +11,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --first: #3f72af;
-  --second: #71c9ce;
-  --third: #dbe2ef;
-  --forth: #f9f7f7;
-}
-
 input,
 button {
   outline: none;

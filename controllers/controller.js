@@ -90,7 +90,7 @@ const approveUser = asyncHandler((req, res, next) => {
 
 const tobeapproved = asyncHandler((req, res) => {
     User.find({ isActive: false }).then(result => {
-        res.status(200).render("ToBeApprovedList.ejs", { buttonName: "Approve", title: "To be approved", user: result });
+        res.status(200).render("ToBeApprovedList.ejs", { title: "Approve", targetURL: "/approve/", user: result });
     }).catch(err => {
         res.status(500);
         throw new Error(err.message);
@@ -100,7 +100,7 @@ const tobeapproved = asyncHandler((req, res) => {
 
 const promote = asyncHandler((req, res) => {
     User.find({ userType: "MEMBER" }).then(result => {
-        res.status(200).render("ToBeApprovedList.ejs", { buttonName: "Promote", title: "To be promoted", user: result });
+        res.status(200).render("ToBeApprovedList.ejs", { title: "Promote", targetURL: "/promote/", user: result });
     }).catch(err => {
         res.status(500);
         throw new Error(err.message);
@@ -109,7 +109,6 @@ const promote = asyncHandler((req, res) => {
 
 const promoteUser = asyncHandler((req, res, next) => {
     const id = req.params.id;
-    
     User.findByIdAndUpdate(id, { userType: "MOD" }).then(result => {
         console.log(result)
         res.status(200);
@@ -152,7 +151,7 @@ const getUpload = (req, res) => {
 }
 
 const getHomePage = (req, res) => {
-    res.status(200).render('home.ejs', { title: "Home" });
+    res.status(200).render('NewHome.ejs', { title: "Home" });
 }
 
 const getAdminPage = (req, res) => {

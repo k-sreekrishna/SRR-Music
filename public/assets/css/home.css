@@ -1,0 +1,89 @@
+:root {
+  --first: #ff4d00;
+  --second: #ff7400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#menu {
+  background-color: var(--first);
+}
+
+.bgOrange {
+  background-color: var(--second);
+  position: relative;
+  padding: 100px 0px;
+  color: white;
+}
+
+.banner {
+  margin: 0 auto;
+}
+.banner img {
+  height: 400px;
+  width: 80%;
+}
+
+.banner div {
+  min-height: 200px;
+}
+
+/* .wave {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  padding: 0px 0px;
+} */
+
+.navbar-inverse {
+  border-color: transparent;
+}
+.navbar-inverse .navbar-nav > li > a,
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: var(--second-c);
+}
+
+.exact-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rel {
+  position: relative;
+}
+
+.stats-sec {
+  padding: 40px 0px 60px 0px;
+  color: var(--second-c);
+  margin: 0px;
+}
+
+.count {
+  font-size: 90px;
+}
+
+.students-count {
+  background-color: var(--first);
+  padding: 50px;
+  color: #fff;
+}
+.experience-count {
+  background-color: var(--second);
+  padding: 50px;
+  color: #fff;
+}
+
+.myfooter {
+  background-color: var(--first);
+  padding: 5px 40px 5px 40px;
+  color: #fff;
+  font-size: 14px;
+  text-align: right;
+}
